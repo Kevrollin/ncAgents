@@ -22,7 +22,7 @@ const Header = () => {
             <span className="text-2xl font-bold text-foreground tracking-tight group-hover:text-primary transition-colors duration-300">
               nc
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                AGENTS
+                AGENTSss
               </span>
             </span>
           </Link>
