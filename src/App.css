@@ -1,7 +1,5 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* Use Tailwind utility classes for responsiveness */
   text-align: center;
 }
 
@@ -34,7 +32,8 @@
 }
 
 .card {
-  padding: 2em;
+  /* Responsive padding */
+  @apply p-4 sm:p-6 md:p-8;
 }
 
 .read-the-docs {

@@ -27,6 +27,7 @@ import { useAuth } from "@/contexts/AuthContext";
 const DashboardHeader = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const { logout, user } = useAuth();
@@ -90,7 +91,7 @@ const DashboardHeader = () => {
               </span>
             </Link>
 
-            {/* Main Navigation */}
+            {/* Main Navigation - Desktop */}
             <nav className="hidden lg:flex items-center gap-1">
               {navigationItems.map((item) => (
                 <Link
@@ -112,6 +113,59 @@ const DashboardHeader = () => {
                 </Link>
               ))}
             </nav>
+
+            {/* Hamburger for Mobile */}
+            <button
+              className="lg:hidden flex items-center p-2 rounded-md hover:bg-card/50"
+              aria-label="Open navigation menu"
+              onClick={() => setIsMobileNavOpen(true)}
+            >
+              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-foreground"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        {/* Mobile Navigation Drawer */}
+        <AnimatePresence>
+          {isMobileNavOpen && (
+            <motion.div
+              initial={{ x: "-100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "-100%", opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-[100] bg-black/40 lg:hidden"
+              onClick={() => setIsMobileNavOpen(false)}
+            >
+              <motion.nav
+                initial={{ x: "-100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-100%" }}
+                transition={{ duration: 0.2 }}
+                className="absolute left-0 top-0 h-full w-64 bg-card shadow-lg p-6 flex flex-col gap-4"
+                onClick={e => e.stopPropagation()}
+              >
+                <button
+                  className="self-end mb-4 p-2 rounded-md hover:bg-card/50"
+                  aria-label="Close navigation menu"
+                  onClick={() => setIsMobileNavOpen(false)}
+                >
+                  <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-foreground"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+                {navigationItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`px-4 py-2 rounded-lg text-base font-medium transition-all duration-300 relative group ${
+                      isActiveRoute(item.href)
+                        ? "text-primary bg-primary/10"
+                        : "text-muted-foreground hover:text-foreground hover:bg-card/50"
+                    }`}
+                    onClick={() => setIsMobileNavOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </motion.nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
           </div>
 
           {/* Search and User Actions */}
