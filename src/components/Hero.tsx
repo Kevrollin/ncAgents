@@ -128,7 +128,7 @@ const Hero = () => {
 
       {/* Enhanced Main Content with Proper Layout */}
       <div className="relative z-10 w-full justify-center">
-        <div className="container mx-auto px-8 max-w-7xl pt-2 lg:pt-32">
+        <div className="container mx-auto pb-12 lg:pb-8 pt-32 lg:pt-32">
           <div className="relative flex flex-col items-center text-center min-h-[calc(100vh-12rem)] justify-center w-full">
             {/* Main Content Container */}
             <motion.div
@@ -139,7 +139,7 @@ const Hero = () => {
             >
               {/* Enhanced Hero Title with Brand Colors */}
               <motion.div
-                className="space-y-4"
+                className="space-y-2"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -243,7 +243,7 @@ const Hero = () => {
                 </motion.div>
 
                 <motion.p
-                  className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light"
+                  className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-4 leading-relaxed font-light"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.7 }}
@@ -256,7 +256,7 @@ const Hero = () => {
 
               {/* Enhanced 2x2 Feature Grid with Animations */}
               <motion.div
-                className="grid grid-cols-2 gap-2 max-w-2xl h-48 mx-2"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-2 h-44 mx-6"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.9 }}
@@ -318,7 +318,7 @@ const Hero = () => {
 
               {/* Enhanced CTA Buttons with Brand Colors */}
               <motion.div
-                className="flex items-center justify-center gap-4 lg:mb-8 mt-6"
+                className="flex items-center justify-center gap-4 lg:mb-12 pt-24 lg:pt-12"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.5 }}
@@ -330,9 +330,9 @@ const Hero = () => {
                   <Button
                     variant="outline"
                     size="xl"
-                    className="group bg-card/30 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 px-8 py-4"
+                    className="group bg-card/30 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 px-4 py-2"
                   >
-                    <span className="font-semibold">Read Docs</span>
+                    <span className="font-semibold text-sm">Read Docs</span>
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </motion.div>
@@ -344,7 +344,7 @@ const Hero = () => {
                     size="xl"
                     className="group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-glow-sm hover:shadow-glow font-semibold transition-all duration-300 px-8 py-4"
                   >
-                    <span>Launch App</span>
+                    <span className="text-sm">Launch App</span>
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </motion.div>
