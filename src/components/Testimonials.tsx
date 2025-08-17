@@ -155,7 +155,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-8 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div
         className="absolute inset-0 bg-dot-pattern opacity-20"
@@ -163,17 +163,17 @@ const Testimonials = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-transparent" />
 
-      <div className="container mx-auto px-6 max-w-7xl relative z-10">
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-4"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -185,7 +185,7 @@ const Testimonials = () => {
             </span>
           </motion.h2>
           <motion.p
-            className="text-xl text-muted-foreground max-w-3xl mx-auto"
+            className="text-sm text-muted-foreground max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -263,7 +263,7 @@ const Testimonials = () => {
                         </div>
 
                         {/* Testimonial Content */}
-                        <blockquote className="text-foreground/90 leading-relaxed mb-6 flex-grow">
+                        <blockquote className="text-foreground/90 leading-relaxed mb-4 flex-grow">
                           "{testimonial.content}"
                         </blockquote>
 
@@ -298,7 +298,7 @@ const Testimonials = () => {
           </div>
 
           {/* Dot Indicators */}
-          <div className="flex justify-center gap-2 mt-8">
+          <div className="flex justify-center gap-2 mt-4">
             {Array.from({ length: maxIndex + 1 }).map((_, index) => (
               <button
                 key={index}
@@ -315,13 +315,13 @@ const Testimonials = () => {
 
         {/* Bottom Stats */}
         <motion.div
-          className="mt-16 text-center"
+          className="mt-8 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-wrap items-center justify-center gap-8 p-8 bg-card/20 backdrop-blur-sm rounded-2xl border border-border/30">
+          <div className="flex flex-wrap items-center justify-left lg:justify-center gap-2 p-4 bg-card/20 backdrop-blur-sm rounded-2xl border border-border/30">
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
               <span className="text-primary font-bold text-2xl">4.9/5</span>

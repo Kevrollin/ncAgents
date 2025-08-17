@@ -128,7 +128,7 @@ const Hero = () => {
 
       {/* Enhanced Main Content with Proper Layout */}
       <div className="relative z-10 w-full justify-center">
-        <div className="container mx-auto pb-12 lg:pb-8 pt-32 lg:pt-32">
+        <div className="container mx-auto pb-4 lg:pb-2 pt-32 lg:pt-32">
           <div className="relative flex flex-col items-center text-center min-h-[calc(100vh-12rem)] justify-center w-full">
             {/* Main Content Container */}
             <motion.div
@@ -256,36 +256,36 @@ const Hero = () => {
 
               {/* Enhanced 2x2 Feature Grid with Animations */}
               <motion.div
-                className="grid grid-cols-1 lg:grid-cols-2 gap-2 h-44 mx-6"
+                className="grid grid-cols-2 gap-1 h-40 mx-2"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.9 }}
               >
                 {[
                   {
-                    icon: <Brain className="w-6 h-6 text-primary" />,
+                    icon: <Brain className="w-4 h-4 text-primary" />,
                     label: "Smart Memory",
                     desc: "Advanced AI memory",
                   },
                   {
-                    icon: <Users className="w-6 h-6 text-primary" />,
+                    icon: <Users className="w-4 h-4 text-primary" />,
                     label: "Multi-Agent",
                     desc: "Team collaboration",
                   },
                   {
-                    icon: <Zap className="w-6 h-6 text-primary" />,
+                    icon: <Zap className="w-4 h-4 text-primary" />,
                     label: "Fast Deploy",
                     desc: "Instant deployment",
                   },
                   {
-                    icon: <Shield className="w-6 h-6 text-primary" />,
+                    icon: <Shield className="w-4 h-4 text-primary" />,
                     label: "Secure Web3",
                     desc: "Blockchain ready",
                   },
                 ].map(({ icon, label, desc }, i) => (
                   <motion.div
                     key={label}
-                    className="group flex items-center gap-2 p-2 rounded-xl bg-card/30 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:bg-card/50 transition-all duration-300 cursor-pointer"
+                    className="group flex items-center gap-1 p-1 rounded-sm bg-card/30 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:bg-card/50 transition-all duration-300 cursor-pointer"
                     initial={{ opacity: 0, y: 30, scale: 0.9 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{
@@ -298,14 +298,14 @@ const Hero = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <motion.div
-                      className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl group-hover:scale-110 transition-transform duration-300"
+                      className="flex items-center justify-center w-8 h-8 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl group-hover:scale-110 transition-transform duration-300"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
                       {icon}
                     </motion.div>
                     <div className="flex-1 text-left">
-                      <span className="block text-xsm font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                      <span className="block text-sm font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                         {label}
                       </span>
                       <span className="block text-sm text-muted-foreground">
@@ -318,7 +318,7 @@ const Hero = () => {
 
               {/* Enhanced CTA Buttons with Brand Colors */}
               <motion.div
-                className="flex items-center justify-center gap-4 lg:mb-12 pt-24 lg:pt-12"
+                className="flex items-center justify-center gap-4 lg:mb-4 pt-2 lg:pt-4"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.5 }}

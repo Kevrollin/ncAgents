@@ -61,9 +61,9 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-8 px-2">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Powerful Features for Modern AI
           </h2>
@@ -74,7 +74,7 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -86,7 +86,7 @@ const Features = () => {
             >
               <Card className="group hover:border-primary/30 transition-all duration-300 hover:shadow-glow-sm bg-card/50 backdrop-blur-sm h-full overflow-hidden">
                 {/* Feature Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
                   <motion.img
                     src={feature.image}
                     alt={feature.title}
