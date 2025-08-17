@@ -5,7 +5,7 @@ import heroAiBg from "@/assets/hero-ai-bg.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 lg:pb-12">
       {/* Enhanced Background with Image */}
       <div className="absolute inset-0 z-0">
         <div
@@ -127,25 +127,25 @@ const Hero = () => {
       </div>
 
       {/* Enhanced Main Content with Proper Layout */}
-      <div className="relative z-10 w-full">
-        <div className="container mx-auto px-6 max-w-7xl pt-32">
+      <div className="relative z-10 w-full justify-center">
+        <div className="container mx-auto px-8 max-w-7xl pt-2 lg:pt-32">
           <div className="relative flex flex-col items-center text-center min-h-[calc(100vh-12rem)] justify-center w-full">
             {/* Main Content Container */}
             <motion.div
-              className="max-w-5xl mx-auto space-y-10 relative z-20"
+              className="max-w-5xl space-y-10 relative z-20"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {/* Enhanced Hero Title with Brand Colors */}
               <motion.div
-                className="space-y-8"
+                className="space-y-4"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 <motion.h1
-                  className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-none"
+                  className="text-2xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-none"
                   animate={{
                     scale: [1, 1.02, 1],
                   }}
@@ -206,7 +206,7 @@ const Hero = () => {
                       },
                     }}
                   >
-                    <Sparkles className="w-6 h-6 text-primary" />
+                    <Sparkles className="w-4 h-4 text-primary" />
                   </motion.div>
                   <motion.p
                     className="text-xl md:text-2xl lg:text-3xl text-foreground font-light"
@@ -238,7 +238,7 @@ const Hero = () => {
                       },
                     }}
                   >
-                    <Sparkles className="w-6 h-6 text-primary" />
+                    <Sparkles className="w-4 h-4 text-primary" />
                   </motion.div>
                 </motion.div>
 
@@ -256,7 +256,7 @@ const Hero = () => {
 
               {/* Enhanced 2x2 Feature Grid with Animations */}
               <motion.div
-                className="grid grid-cols-2 gap-8 max-w-2xl mx-auto"
+                className="grid grid-cols-2 gap-2 max-w-2xl h-48 mx-2"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.9 }}
@@ -285,7 +285,7 @@ const Hero = () => {
                 ].map(({ icon, label, desc }, i) => (
                   <motion.div
                     key={label}
-                    className="group flex items-center gap-4 p-4 rounded-xl bg-card/30 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:bg-card/50 transition-all duration-300 cursor-pointer"
+                    className="group flex items-center gap-2 p-2 rounded-xl bg-card/30 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:bg-card/50 transition-all duration-300 cursor-pointer"
                     initial={{ opacity: 0, y: 30, scale: 0.9 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{
@@ -305,7 +305,7 @@ const Hero = () => {
                       {icon}
                     </motion.div>
                     <div className="flex-1 text-left">
-                      <span className="block text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                      <span className="block text-xsm font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                         {label}
                       </span>
                       <span className="block text-sm text-muted-foreground">
@@ -318,7 +318,7 @@ const Hero = () => {
 
               {/* Enhanced CTA Buttons with Brand Colors */}
               <motion.div
-                className="flex items-center justify-center gap-6"
+                className="flex items-center justify-center gap-4 lg:mb-8 mt-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.5 }}

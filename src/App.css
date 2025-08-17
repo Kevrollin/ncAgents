@@ -1,6 +1,7 @@
 #root {
   /* Use Tailwind utility classes for responsiveness */
   text-align: center;
+  outline: 2px solid red;
 }
 
 .logo {

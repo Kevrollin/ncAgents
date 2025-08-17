@@ -12,17 +12,17 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/30 shadow-lg">
-      <div className="container mx-auto px-6 py-5 max-w-7xl">
+      <div className="container mx-auto px-6 py-2 max-w-7xl">
         <nav className="flex items-center justify-between">
           {/* Enhanced Logo */}
-          <Link to="/" className="flex items-center gap-4 group">
-            <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl shadow-glow-sm group-hover:shadow-glow transition-all duration-300 group-hover:scale-105">
-              <Brain className="w-7 h-7 text-primary-foreground" />
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-xl shadow-glow-sm group-hover:shadow-glow transition-all duration-300 group-hover:scale-105">
+              <Brain className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="text-2xl font-bold text-foreground tracking-tight group-hover:text-primary transition-colors duration-300">
+            <span className="text-sm font-bold text-foreground tracking-tight group-hover:text-primary transition-colors duration-300">
               nc
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                AGENTSss
+                AGENTS
               </span>
             </span>
           </Link>
@@ -96,8 +96,8 @@ const Header = () => {
             </Link>
             <Link to="/signup">
               <Button
-                size="lg"
-                className="font-semibold group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-glow-sm hover:shadow-glow transition-all duration-300 px-6"
+                size="sm"
+                className="font-semibold group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-glow-sm hover:shadow-glow transition-all duration-300 px-4"
               >
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
