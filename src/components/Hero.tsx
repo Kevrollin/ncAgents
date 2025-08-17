@@ -5,11 +5,11 @@ import heroAiBg from "@/assets/hero-ai-bg.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 lg:pb-12">
+    <section className="relative min-h-[200px] flex items-center justify-center overflow-x-hidden overflow-y-auto pb-6 sm:pb-12">
       {/* Enhanced Background with Image */}
       <div className="absolute inset-0 z-0">
         <div
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
+          className="w-full h-full min-h-[400px] sm:min-h-[600px] bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroAiBg})` }}
         />
         {/* Multi-layered overlay for better text readability */}
@@ -35,12 +35,12 @@ const Hero = () => {
 
       {/* Perfectly Centered Availability Notice */}
       <motion.div
-        className="absolute top-24 left-0 right-0 z-30 flex justify-center"
+        className="absolute top-16 lg:top-16 lg:pb-12 left-0 right-0 z-30 flex justify-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
       >
-        <div className="flex items-center justify-center gap-3 bg-card/40 backdrop-blur-xl border border-green-500/20 rounded-full px-8 py-3 shadow-glow-sm">
+        <div className="flex items-center justify-center gap-2 sm:gap-3 bg-card/40 backdrop-blur-xl border border-green-500/20 rounded-full px-2 sm:px-8 py-1 sm:py-3 shadow-glow-sm">
           <motion.div
             className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"
             animate={{
@@ -49,7 +49,7 @@ const Hero = () => {
             }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />
-          <span className="text-sm font-medium text-foreground whitespace-nowrap">
+          <span className="text-xs sm:text-sm font-medium text-foreground whitespace-nowrap">
             Available now, only 3 spots left
           </span>
         </div>
@@ -127,12 +127,12 @@ const Hero = () => {
       </div>
 
       {/* Enhanced Main Content with Proper Layout */}
-      <div className="relative z-10 w-full justify-center">
-        <div className="container mx-auto pb-4 lg:pb-2 pt-32 lg:pt-32">
-          <div className="relative flex flex-col items-center text-center min-h-[calc(100vh-12rem)] justify-center w-full">
+      <div className="relative z-10 w-full flex justify-center">
+        <div className="container mx-auto pb-2 pt-16 sm:pt-24 px-2 sm:px-4">
+          <div className="relative flex flex-col items-center text-center justify-center w-full">
             {/* Main Content Container */}
             <motion.div
-              className="max-w-5xl space-y-10 relative z-20"
+              className="max-w-5xl w-full space-y-6 sm:space-y-10 relative z-20 px-2 sm:px-4"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -145,7 +145,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 <motion.h1
-                  className="text-2xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-none"
+                  className="text-2xl xs:text-3xl py-12 sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-none break-words"
                   animate={{
                     scale: [1, 1.02, 1],
                   }}
@@ -183,7 +183,7 @@ const Hero = () => {
                 </motion.h1>
 
                 <motion.div
-                  className="flex items-center justify-center gap-3"
+                  className="flex flex-row sm:flex-row items-center justify-center gap-2 sm:gap-3"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
@@ -209,7 +209,7 @@ const Hero = () => {
                     <Sparkles className="w-4 h-4 text-primary" />
                   </motion.div>
                   <motion.p
-                    className="text-xl md:text-2xl lg:text-3xl text-foreground font-light"
+                    className="text-xs xs:text-sm sm:text-xl md:text-2xl lg:text-3xl text-foreground font-light"
                     animate={{ opacity: [0.8, 1, 0.8] }}
                     transition={{
                       duration: 3,
@@ -243,7 +243,7 @@ const Hero = () => {
                 </motion.div>
 
                 <motion.p
-                  className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-4 leading-relaxed font-light"
+                  className="text-xs xs:text-sm sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2 leading-relaxed font-light"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.7 }}
@@ -256,7 +256,7 @@ const Hero = () => {
 
               {/* Enhanced 2x2 Feature Grid with Animations */}
               <motion.div
-                className="grid grid-cols-2 gap-1 h-40 mx-2"
+                className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-4 h-auto mx-1 py-12"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.9 }}
@@ -285,7 +285,7 @@ const Hero = () => {
                 ].map(({ icon, label, desc }, i) => (
                   <motion.div
                     key={label}
-                    className="group flex items-center gap-1 p-1 rounded-sm bg-card/30 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:bg-card/50 transition-all duration-300 cursor-pointer"
+                    className="group flex items-center gap-2 sm:gap-1 p-2 sm:p-1 rounded-sm bg-card/30 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:bg-card/50 transition-all duration-300 cursor-pointer"
                     initial={{ opacity: 0, y: 30, scale: 0.9 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{
@@ -298,7 +298,7 @@ const Hero = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <motion.div
-                      className="flex items-center justify-center w-8 h-8 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl group-hover:scale-110 transition-transform duration-300"
+                      className="flex items-center justify-center w-8 h-8 sm:w-8 sm:h-8 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl group-hover:scale-110 transition-transform duration-300"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
@@ -318,7 +318,7 @@ const Hero = () => {
 
               {/* Enhanced CTA Buttons with Brand Colors */}
               <motion.div
-                className="flex items-center justify-center gap-4 lg:mb-4 pt-2 lg:pt-4"
+                className="flex flex-row sm:flex-row items-center justify-center gap-2 sm:gap-4 pt-2 sm:pt-4"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.5 }}
@@ -330,9 +330,11 @@ const Hero = () => {
                   <Button
                     variant="outline"
                     size="xl"
-                    className="group bg-card/30 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 px-4 py-2"
+                    className="group bg-card/30 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 px-4 py-2 w-full sm:w-auto"
                   >
-                    <span className="font-semibold text-sm">Read Docs</span>
+                    <span className="font-semibold text-xs xs:text-sm">
+                      Read Docs
+                    </span>
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </motion.div>
@@ -342,9 +344,9 @@ const Hero = () => {
                 >
                   <Button
                     size="xl"
-                    className="group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-glow-sm hover:shadow-glow font-semibold transition-all duration-300 px-8 py-4"
+                    className="group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-glow-sm hover:shadow-glow font-semibold transition-all duration-300 px-8 py-4 w-full sm:w-auto"
                   >
-                    <span className="text-sm">Launch App</span>
+                    <span className="text-xs xs:text-sm">Launch App</span>
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </motion.div>

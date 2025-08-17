@@ -61,20 +61,20 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-8 px-2">
+    <section className="py-6 sm:py-8 px-2 sm:px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Powerful Features for Modern AI
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Everything you need to build, deploy, and manage sophisticated AI
             agents with advanced memory, collaboration, and blockchain
             integration.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -86,7 +86,7 @@ const Features = () => {
             >
               <Card className="group hover:border-primary/30 transition-all duration-300 hover:shadow-glow-sm bg-card/50 backdrop-blur-sm h-full overflow-hidden">
                 {/* Feature Image */}
-                <div className="relative h-40 overflow-hidden">
+                <div className="relative h-32 sm:h-40 overflow-hidden">
                   <motion.img
                     src={feature.image}
                     alt={feature.title}
@@ -94,21 +94,21 @@ const Features = () => {
                     whileHover={{ scale: 1.05 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-accent rounded-lg shadow-lg">
-                      <feature.icon className="w-6 h-6 text-primary-foreground" />
+                  <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4">
+                    <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-accent rounded-lg shadow-lg">
+                      <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
                     </div>
                   </div>
                 </div>
 
                 <CardHeader>
-                  <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
+                  <CardTitle className="text-lg sm:text-xl text-foreground group-hover:text-primary transition-colors">
                     {feature.title}
                   </CardTitle>
                 </CardHeader>
 
                 <CardContent>
-                  <CardDescription className="text-muted-foreground leading-relaxed">
+                  <CardDescription className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {feature.description}
                   </CardDescription>
                 </CardContent>
