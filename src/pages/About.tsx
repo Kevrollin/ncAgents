@@ -77,11 +77,11 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-[200px] bg-background">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+      <section className="relative pt-24 pb-4 px-4 justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-accent/5" />
         <div
           className="absolute inset-0 bg-dot-pattern opacity-20"
@@ -96,7 +96,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <motion.div
-              className="inline-flex items-center gap-2 bg-card/40 backdrop-blur-sm border border-border/50 rounded-full px-6 py-2 mb-8"
+              className="inline-flex items-center gap-2 bg-card/40 backdrop-blur-sm border border-border/50 rounded-full px-6 py-2 mb-4"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -107,20 +107,20 @@ const About = () => {
               </span>
             </motion.div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4">
               Building the Future of{" "}
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                 AI Agents
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-12">
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8">
               We're on a mission to democratize AI agent development, making
               sophisticated artificial intelligence accessible to developers and
               organizations worldwide.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/signup">
                 <Button
                   size="lg"
@@ -139,26 +139,26 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-24 px-6">
+      <section className="py-8 px-4">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 At ncAGENTS, we believe that artificial intelligence should be a
                 tool for empowerment, not exclusion. Our platform breaks down
                 the barriers to AI development, providing developers with the
                 tools they need to create intelligent agents that can think,
                 learn, and collaborate.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-2">
                 {[
                   "Democratize AI agent development",
                   "Foster innovation through collaboration",
@@ -167,7 +167,7 @@ const About = () => {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -187,18 +187,18 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl p-8 backdrop-blur-sm border border-border/50">
-                <div className="grid grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl p-4 backdrop-blur-sm border border-border/50">
+                <div className="grid grid-cols-2 gap-2">
                   {stats.map((stat, index) => (
                     <motion.div
                       key={index}
-                      className="text-center"
+                      className="text-left"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       viewport={{ once: true }}
                     >
-                      <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                      <div className="text-2xl md:text-4xl font-bold text-primary mb-2">
                         {stat.number}
                       </div>
                       <div className="text-sm text-muted-foreground">
@@ -214,10 +214,10 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 px-6 bg-card/20">
+      <section className="py-8 px-4 bg-card/20">
         <div className="container mx-auto max-w-7xl">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-4"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -231,7 +231,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {values.map((value, index) => (
               <motion.div
                 key={index}
@@ -243,10 +243,10 @@ const About = () => {
               >
                 <Card className="h-full bg-card/40 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-300">
                   <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
                       <value.icon className="w-8 h-8 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-4">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
                       {value.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
@@ -261,19 +261,19 @@ const About = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-24 px-6">
+      <section className="py-8 px-4">
         <div className="container mx-auto max-w-7xl">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-4"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Our Journey
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Key milestones in our mission to revolutionize AI agent
               development
             </p>
@@ -283,19 +283,19 @@ const About = () => {
             {milestones.map((milestone, index) => (
               <motion.div
                 key={index}
-                className="flex gap-8 mb-12 last:mb-0"
+                className="flex gap-2 mb-2 last:mb-0"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold">
+                <div className="flex">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold">
                     {milestone.year}
                   </div>
                 </div>
-                <div className="flex-1 pb-8">
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                <div className="flex-1 pb-4">
+                  <h3 className="text-xl font-bold text-foreground mb-1">
                     {milestone.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -309,7 +309,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10">
+      <section className="py-8 px-4 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             className="text-center"
@@ -318,14 +318,14 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Ready to Build the Future?
             </h2>
-            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-6 max-w-3xl mx-auto">
               Join thousands of developers who are already creating intelligent
               agents with ncAGENTS
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/signup">
                 <Button
                   size="lg"

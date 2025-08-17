@@ -175,11 +175,11 @@ const Pricing = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-[200px] bg-background">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+      <section className="relative pt-24 pb-4 px-4 justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-accent/5" />
         <div
           className="absolute inset-0 bg-dot-pattern opacity-20"
@@ -266,7 +266,7 @@ const Pricing = () => {
       </section>
 
       {/* Pricing Cards */}
-      <section className="py-24 px-6">
+      <section className="py-8 px-4">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -298,7 +298,8 @@ const Pricing = () => {
                   )}
 
                   <CardHeader className="text-center pb-8">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
+                    <div className=" flex flex-row gap-2 items-center align-center justify-center">
+                      <div className="w-16 h-16 mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
                       {index === 0 && <Zap className="w-8 h-8 text-primary" />}
                       {index === 1 && (
                         <Brain className="w-8 h-8 text-primary" />
@@ -308,9 +309,10 @@ const Pricing = () => {
                       )}
                     </div>
 
-                    <CardTitle className="text-2xl font-bold text-foreground mb-2">
+                    <CardTitle className="text-2xl font-bold text-foreground mb-5">
                       {plan.name}
                     </CardTitle>
+                    </div>
 
                     <p className="text-muted-foreground mb-6">
                       {plan.description}
@@ -381,16 +383,16 @@ const Pricing = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-6 bg-card/20">
+      <section className="py-8 px-4 bg-card/20">
         <div className="container mx-auto max-w-7xl">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-8"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Trusted by Developers
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -398,7 +400,7 @@ const Pricing = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -445,10 +447,10 @@ const Pricing = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 px-6">
+      <section className="py-8 px-4">
         <div className="container mx-auto max-w-4xl">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-8"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -462,7 +464,7 @@ const Pricing = () => {
             </p>
           </motion.div>
 
-          <div className="space-y-4">
+          <div className="space-y-2">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -477,9 +479,9 @@ const Pricing = () => {
                       onClick={() =>
                         setOpenFaq(openFaq === index ? null : index)
                       }
-                      className="w-full p-6 text-left flex items-center justify-between hover:bg-card/20 transition-colors"
+                      className="w-full p-4 text-left flex items-center justify-between hover:bg-card/20 transition-colors"
                     >
-                      <h3 className="text-lg font-semibold text-foreground pr-4">
+                      <h3 className="text-sm font-semibold text-foreground pr-4">
                         {faq.question}
                       </h3>
                       <motion.div
@@ -499,7 +501,7 @@ const Pricing = () => {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <div className="px-6 pb-6 text-muted-foreground leading-relaxed">
+                          <div className="px-4 pb-2 text-muted-foreground leading-relaxed">
                             {faq.answer}
                           </div>
                         </motion.div>
@@ -514,7 +516,7 @@ const Pricing = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10">
+      <section className="py-8 px-4 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             className="text-center"
@@ -523,18 +525,18 @@ const Pricing = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto mb-4">
               Join thousands of developers building the future with intelligent
               AI agents
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-row sm:flex-row items-center justify-center gap-4">
               <Link to="/signup">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-glow-sm hover:shadow-glow"
+                  className="p-4 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-glow-sm hover:shadow-glow"
                 >
                   Start Free Trial
                   <ArrowRight className="w-4 h-4 ml-2" />

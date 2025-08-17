@@ -86,7 +86,7 @@ const Features = () => {
             >
               <Card className="group hover:border-primary/30 transition-all duration-300 hover:shadow-glow-sm bg-card/50 backdrop-blur-sm h-full overflow-hidden">
                 {/* Feature Image */}
-                <div className="relative h-32 sm:h-40 overflow-hidden">
+                <div className="relative h-48 sm:h-40 overflow-hidden">
                   <motion.img
                     src={feature.image}
                     alt={feature.title}
